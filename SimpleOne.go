@@ -2,6 +2,26 @@ package main
 
 import "fmt"
 
+func add(a int, b int) int {
+	return a + b
+}
+
+func swap(a, b string) (string, string) {
+	return b, a
+}
+
+func knowToReturn(x, y int) {
+	x = 1
+	y = 2
+	//	short function only
+	return
+}
+
+type Vertex struct {
+	X int
+	Y int
+}
+
 func main() {
 	fmt.Println("Start", "Here")
 	a := true
@@ -38,6 +58,21 @@ func main() {
 	for i := 0; i < 3; i++ {
 		arr = append(arr, i)
 		mp[i] = "yes"
+	}
+	add(1, 2)
+	x, y := swap("Swapped", "me")
+	fmt.Println(x, y)
+
+	i := 42
+	p := &i
+	fmt.Println(*p)
+	v := Vertex{1, 2}
+	v.Y
+	pv := &v
+
+	arrrr := make([]int, 0, 6)
+	for i, val := range arrrr {
+
 	}
 
 }
